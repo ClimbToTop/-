@@ -92,6 +92,9 @@ border: 1px solid #eee;
   }
   textarea.inputString{
     margin-right: 20px;
-    border: 1px solid #eee;
+    border: 1px solid #b8b8b8;
     background-color: #fff;
+  }
+  textarea.exportString{
+    border: 1px solid #eee;
   }
