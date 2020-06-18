@@ -1,0 +1,67 @@
+/* 公共样式 */
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+html{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eeeff3;
+}
+.g-w200{
+  width: 180px;
+}
+.g-w80{
+  width: 80px;
+}
+.mgr215{
+  margin-right: 215px;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+.form-control{
+  height: 26px;
+  border-radius: 2px;
+  background-image: none;
+  color: rgb(102, 102, 102);
+  display: block;
+  font-size: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f3f3f3;
+  border-image: initial;
+  border-radius: 1px;
+  padding: 0px 12px;
+  background-color: #f8f8f8;
+}
+textarea{
+  resize: none;
+ }
+ .f-dn{
+ display:none;
+ }
+ .f-vm{
+ display: inline-block;
+ vertical-align: middle;
+ }
+ .ml30{
+  margin-left: 20px;
+}
+.btn-ok {
+  background-color: #b6b2b2;
+  border: 0;
+  color: #FFF;
+  padding: 4.5px 10px;
+  display: inline-block;
+  outline: 0;
+  font-size: 12px;
+  border-radius: 4px;
+  text-transform: none;
+  cursor: pointer;
+}

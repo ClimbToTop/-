@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>代码小工具</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <script src="jquery.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="title">
+   
+  </div>
+  <div class="content">
+    <div class="model1 model">
+      <div>
+        <div class="f-vm lableId g-w200 mgr215">请输入内容(使用回车分割)：</div>
+       <input type="text" placeholder="输入其他分隔符" class="f-vm form-control g-w200">
+       <button class="f-vm btn-ok ml30">格式化</button>
+      </div>
+      <div>
+          <textarea class="form-control inputString"></textarea>
+          <textarea class="form-control exportString" placeholder="输出内容(默认用英文逗号作为分割符)"></textarea>
+       </div>
+    </div>
+    <div class="model2 model f-dn">
+      <div>
+          <div class="f-vm lableId g-w200 mgr215">请输入内容(使用回车分割)：</div>
+          <input type="text" placeholder="输入其他分隔符" class="f-vm form-control g-w200">
+          <button class="f-vm btn-ok ml30">合并</button>
+      </div>
+       <div>
+          <textarea class="form-control inputString"></textarea>
+          <textarea class="form-control exportString" placeholder="输出内容(默认用英文逗号作为分割符)"></textarea>
+       </div>
+    </div>
+    <div class="model3 f-dn model">
+      <div class="f-vm lableId g-w80">账号ID:</div>
+      <input type="text" placeholder="请输入账号ID" class="f-vm  form-control g-w200">
+      <button class="f-vm btn-ok ml30">计算分库列表</button>
+      <div>
+          <div class="f-vm lableId ">计算结果:</div>
+          <div class="result f-vm answer"></div>
+      </div>
+    </div>
+    <div class="model4 f-dn model">
+        <div class="f-vm lableId g-w80">账号ID:</div>
+        <input type="text" placeholder="请输入账号ID" class="f-vm  form-control g-w200">
+        <button class="f-vm btn-ok ml30">计算分库列表</button>
+        <div>
+            <div class="f-vm lableId">计算结果:</div>
+            <div class="result f-vm answer"></div>
+        </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
