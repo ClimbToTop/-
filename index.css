@@ -3,21 +3,22 @@
   width: 160px;
   height: 100%;
   text-align: center;
-  background-color: black;
+  background-color: #40514e;
   color: #fff;
   font-size: 14px;
+  font-family: fantasy;
   text-align: left;
   padding-top:10px;
   vertical-align: middle;
   float: left;
   box-sizing: border-box;
-  border-right:40px solid #000;
+  border-right:10px solid #11999e;
 } 
  .content{
   width: 80%;
   height: 100%;
   vertical-align: middle;
-  border: 10px solid #000;
+  border: 10px solid #40514e;
   border-left: none;
   float: left;
   border-radius:0 10px 10px 0;
@@ -79,7 +80,7 @@ border: 1px solid #eee;
   width: 350px;
   height: 400px;
   border: 1px solid rgb(243, 243, 243);
-  background-color: #f8f8f8;
+  background-color: #e4f9f5;
   border-radius: 5px;
 }
   
