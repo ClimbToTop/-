@@ -116,13 +116,13 @@ $(function () {
   //模块五
   $('.model5 button').on('click', function () {
     console.log(666);
+    var inputString = $('.model5 .inputString').val();
     //默认分割符为英文逗号
     var splitStr = ",";
     if (!inputString || inputString.trim().length < 0) {
       alert('请输入内容');
       return false;
     }
-
     var inputArr = inputString.split('\n');
     var set = new Set();
     for (var i = 0; i < inputArr.length; i++) {
