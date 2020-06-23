@@ -136,7 +136,7 @@ $(function () {
       var str = set.get(i);
       returnStr +=  str + splitStr;
     }
-    $('.model1 .exportString').val(returnStr.substring(0, returnStr.length - 1))
+    $('.model5 .exportString').val(returnStr.substring(0, returnStr.length - 1))
   })
   
 
