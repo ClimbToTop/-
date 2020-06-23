@@ -1,13 +1,14 @@
 $(function () {
   //侧边栏数据
-  var data = [{ 'nama': '账户ID格式化工具' },
-  { 'nama': '合并同账户下的关键词' },
-  { 'nama': '计算sku分库（4*32）账号ID' },
-  { 'nama': '计算xuri分库（32*32）账号ID' }
+  var data = [{ 'name': '账户ID格式化工具' },
+  { 'name': '合并同账户下的关键词' },
+  { 'name': '计算sku分库（4*32）账号ID' },
+  { 'name': '计算xuri分库（32*32）账号ID' },
+  { 'name': '字符串去重' }
   ]
   var html = '<ul>'
   data.forEach(function (item, index) {
-    html += '<li data-value=' + (index + 1) + '><span>' + item.nama + '</span></li>'
+    html += '<li data-value=' + (index + 1) + '><span>' + item.name + '</span></li>'
   })
   html += '</ul>'
   $('.title').html(html);
@@ -112,6 +113,33 @@ $(function () {
       $('.model4 .answer').text("0" + dbn + "_" + "0" + tbn)
       }
     })
+  //模块五
+  $('.model5 button').on('click', function () {
+    console.log(666);
+    //默认分割符为英文逗号
+    var splitStr = ",";
+    if (!inputString || inputString.trim().length < 0) {
+      alert('请输入内容');
+      return false;
+    }
+
+    var inputArr = inputString.split('\n');
+    var set = new Set();
+    for (var i = 0; i < inputArr.length; i++) {
+      var str = inputArr[i].replace(/^\s+|\s+$/g, "");
+      if (str == '')
+        continue;
+      set.add(str);
+    }
+    var returnStr = set.get(0);
+    for (var i = 1; i < set.length; i++) {
+      var str = set.get(i);
+      returnStr +=  str + splitStr;
+    }
+    $('.model1 .exportString').val(returnStr.substring(0, returnStr.length - 1))
+  })
+  
+
   function checkNum(str) {
 		if (str == "") {
 			alert("别猴急，请输入一个数字");
