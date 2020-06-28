@@ -124,16 +124,13 @@ $(function () {
       return false;
     }
     var inputArr = inputString.split('\n');
-    var set = new Set();
-    for (var i = 0; i < inputArr.length; i++) {
-      var str = inputArr[i].replace(/^\s+|\s+$/g, "");
-      if (str == '')
+    var uniqueArr = Array.from(new Set(inputArr));
+    var returnStr = "";
+    for (var i = 1; i < uniqueArr.length; i++) {
+      var str = uniqueArr[i].replace(/^\s+|\s+$/g, "");
+      if (str == ''){
         continue;
-      set.add(str);
-    }
-    var returnStr = set.get(0);
-    for (var i = 1; i < set.length; i++) {
-      var str = set.get(i);
+      }
       returnStr +=  str + splitStr;
     }
     $('.model5 .exportString').val(returnStr.substring(0, returnStr.length - 1))
