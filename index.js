@@ -109,7 +109,7 @@ $(function () {
       var inputString = $('.model4 input').val();
       if (checkNum(inputString)) {
       var dbn = (inputString % 32) + 1;
-      var tbn = ((Math.floor(inputString / 2)) % 32) + 1;
+      var tbn = ((Math.floor(inputString / 32)) % 32) + 1;
       $('.model4 .answer').text("0" + dbn + "_" + "0" + tbn)
       }
     })
@@ -134,7 +134,7 @@ $(function () {
       returnStr +=  str + splitStr;
     }
     var result = returnStr.substring(0, returnStr.length - 1);
-    result = "\n" + "count:" + uniqueArr.length;
+    result = result + "\n" + "count:" + uniqueArr.length;
     $('.model5 .exportString').val(result)
   })
   
