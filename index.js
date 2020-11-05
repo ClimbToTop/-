@@ -108,12 +108,12 @@ $(function () {
     $('.model4 button').on('click', function () {
       var inputString = $('.model4 input').val();
       if (checkNum(inputString)) {
-      var dbn = (inputString % 4) + 1;
+      var dbn = (inputString % 32) + 1;
       var tbn = ((Math.floor(inputString / 2)) % 32) + 1;
       $('.model4 .answer').text("0" + dbn + "_" + "0" + tbn)
       }
     })
-  //模块五
+  //模块五 去重 并转为一行，用逗号分隔
   $('.model5 button').on('click', function () {
     console.log(666);
     var inputString = $('.model5 .inputString').val();
@@ -126,14 +126,16 @@ $(function () {
     var inputArr = inputString.split('\n');
     var uniqueArr = Array.from(new Set(inputArr));
     var returnStr = "";
-    for (var i = 1; i < uniqueArr.length; i++) {
+    for (var i = 0; i < uniqueArr.length; i++) {
       var str = uniqueArr[i].replace(/^\s+|\s+$/g, "");
       if (str == ''){
         continue;
       }
       returnStr +=  str + splitStr;
     }
-    $('.model5 .exportString').val(returnStr.substring(0, returnStr.length - 1))
+    var result = returnStr.substring(0, returnStr.length - 1);
+    result = "\n" + "count:" + uniqueArr.length;
+    $('.model5 .exportString').val(result)
   })
   
 
