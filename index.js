@@ -141,14 +141,14 @@ $(function () {
 
   function checkNum(str) {
 		if (str == "") {
-			alert("别猴急，请输入一个数字");
+			alert("好歹给我一个数字呀");
 			return false;
 		}
 		var str = str.trim();
 		for (var i = 0; i < str.length; i++) {
 			var ch = str.substring(i, i + 1);
 			if (ch < "0" || ch > "9") {
-				alert("浪费时间，请输入数字而不是其他字符");
+				alert("二货，来根士力架？（你输的是数字嘛）");
 				return false;
 			}
 		}
