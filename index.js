@@ -4,7 +4,8 @@ $(function () {
   { 'name': '合并同账户下的关键词' },
   { 'name': '计算sku分库（4*32）账号ID' },
   { 'name': '计算xuri分库（32*32）账号ID' },
-  { 'name': '字符串去重' }
+  { 'name': '字符串去重' },
+  { 'name': '去除回车' }
   ]
   var html = '<ul>'
   data.forEach(function (item, index) {
@@ -137,6 +138,21 @@ $(function () {
     result = result + "\n" + "count:" + uniqueArr.length;
     $('.model5 .exportString').val(result)
   })
+
+
+    //模块六 去掉换行符 并转为一行
+    $('.model6 button').on('click', function () {
+      console.log(666);
+      var inputString = $('.model6 .inputString').val();
+      if (!inputString || inputString.trim().length < 0) {
+        alert('请输入内容');
+        return false;
+      }
+      var returnStr = inputString.replaceAll('\n', "");
+      console.log(returnStr);
+      $('.model6 .exportString').val(returnStr);
+      copyStr(returnStr);
+    })
   
 
   function checkNum(str) {
@@ -154,4 +170,21 @@ $(function () {
 		}
 		return true;
 	}
+
+  function copyStr(str) {
+		if (str == "") {
+			alert("内容为空");
+			return false;
+		}
+		var str = str.trim();
+		let input = document.createElement('input');
+    input.value = str;
+    document.body.appendChild(input);
+    input.select()
+    document.execCommand('copy')
+    document.body.removeChild(input)
+    alert("已复制到剪贴板")
+	}
+
+  
 })
